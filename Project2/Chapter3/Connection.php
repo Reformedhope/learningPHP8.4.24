@@ -35,6 +35,20 @@ class Connection{
         return $this->$name;
 
     }
+    /**
+     * The string representation of an object.
+     * 
+     * the __toString method allows a class to decide how
+     *  it will react when it is treated like a string 
+     * 
+     * For example what echo/print $obj; will print. 
+     *
+     * @return string
+     */
+    public function __toString(){
+        return "Confrence ID: {$this->conferenceId} </br> Connection ID: {$this->connectionId} </br></br>"; 
+        
+    }
 
 
 
@@ -44,26 +58,26 @@ class Connection{
         return self::$count;
     }
 
+
+    public function setConnectionId($ipAddress) {
+        if (filter_var($ipAddress, FILTER_VALIDATE_IP)) {
+            // Corrected the typo here
+            $this->connectionId = $ipAddress . '-' . self::$count;
+    
+            return;
+        }
+    
+        die('Not a valid IP address');
+    }
+
+    public function getconnectionId(){
+        return $this->connectionId;
+    }
+
+
+
+
     
 }
 
 
-public function  setConnectionId($ipAddress){
-
-    if(filter_var($ipAddress, FILTER_VALIDATE_IP)){
-
-        $this->connectionId = $ipAddress . '-' . self:$count;
-
-        return; 
-
-    }
-    die('Not a valid ip Address');
-
-}
-
-public function getconnectionId(){
-    return $this->connectionId;
-}
-
-
-?>
