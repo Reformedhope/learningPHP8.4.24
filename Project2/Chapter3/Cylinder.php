@@ -7,12 +7,11 @@ class Cylinder extends ThreeDimensionalShape
     /**
      * Calculate the volume V = pieRadius2h
      *
-     * @param array $dimensions
      * @return float
      */
-    public function volume($dimensions): float
+    public function volume(): float
     {
-        return pi() * pow($dimensions['radius'], 2) * $dimensions['height'];
+        return pi() * pow($this->dimensions['radius'], 2) * $this->dimensions['height'];
 
     }
 
