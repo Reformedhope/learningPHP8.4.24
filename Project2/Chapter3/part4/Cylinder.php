@@ -1,8 +1,8 @@
 <?php
 
 
-require_once'ThreeDimensionalShape.php';
-class Cylinder extends ThreeDimensionalShape
+require_once'NoncuboidShape.php';
+class Cylinder extends NonCuboidShape
 {
     /**
      * Calculate the volume V = pieRadius2h

@@ -1,8 +1,11 @@
 <?php
 
-require_once 'ThreeDimensionalShape.php';
+//require_once 'ThreeDimensionalShape.php';
+require_once'NonCuboidShape.php';
 
-class Sphere extends ThreeDimensionalShape {
+// I am changing the class from extending the ThreeDimensionalShape
+// to extend the NoncuboidShape
+class Sphere extends NonCuboidShape {
     
     // public function __construct($dimensions) {
     //     $this->dimensions = $dimensions;
