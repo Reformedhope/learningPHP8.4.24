@@ -32,6 +32,7 @@ class Basket{
         $yayDiscount= $ohNo - $this->discount;
 
         return $yayDiscount;
+    
     }
 
     
