@@ -29,7 +29,7 @@ class CsvFileReader implements FileReaderInterface
 }
 
 // The following code should be outside the class definition:
-$fileReader = new CsvFileReader();
-$items = $fileReader->readFileAsAssociativeArray('inventory.csv');
-print_r($items);
-?>
+// $fileReader = new CsvFileReader();
+// $items = $fileReader->readFileAsAssociativeArray('inventory.csv');
+// print_r($items);
+
