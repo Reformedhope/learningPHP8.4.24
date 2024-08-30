@@ -6,18 +6,20 @@ class Product
 {
     public $name = 'soap';
     # 1. Create a price property and give it a default integar value.
-    public $price = 100;
+    public $price = 10.00;
 
-    public function priceAsCurrency($currencysymbol = '$')
+    public function priceAsCurrency($divisor = 1, $currencysymbol = '$' )
     {
-        $priceAsCurrency = $this->price/100;
+        $priceAsCurrency = $this->price/$divisor;
 
-        return $currencysymbol . $priceAsCurrency;
+        return $currencysymbol . $priceAsCurrency ;
 
     }
 }
 
 $product = new Product();
-print $product->priceAsCurrency('&') . PHP_EOL;
+print $product->priceAsCurrency(currencysymbol: '£') . PHP_EOL;
 
 
+#Challange: give $divisor a default value. 
+#test it out by passing and not passing.
